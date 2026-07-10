@@ -1,0 +1,32 @@
+{
+  "MWPF2E": {
+    "Settings": {
+      "MaxHeroPoints": {
+        "Name": "Hero Points (maximum)",
+        "Hint": "Maximum Hero Points for (non-Mythic) characters. System default is 3; choose 1 to 10 here. Requires a world reload to apply to already-open sheets."
+      }
+    }
+  },
+  "INVCOMP": {
+    "ManageCompartments": "Manage compartments",
+    "AssignCompartment": "Assign compartment",
+    "NoCompartment": "— No compartment —",
+    "NewCompartmentOption": "+ New compartment…",
+    "NewCompartment": "New compartment",
+    "NewCompartmentName": "Compartment name",
+    "NewCompartmentNamePlaceholder": "e.g. Wands",
+    "NoCompartmentsYet": "No compartments created yet.",
+    "Create": "Create",
+    "Save": "Save",
+    "Cancel": "Cancel",
+    "Delete": "Delete"
+  },
+  "ATHLETICSATK": {
+    "SectionHeader": "Athletics Maneuvers",
+    "RowSubtitle": "{skill} • DC {save}",
+    "Configure": {
+      "Label": "Show Athletics Maneuvers",
+      "Hint": "Shows, on the Actions tab, the Athletics maneuvers with the Attack trait (Grapple, Trip, Disarm, Shove, Reposition) with roll buttons that include the Multiple Attack Penalty."
+    }
+  }
+}

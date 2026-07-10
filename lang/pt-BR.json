@@ -1,0 +1,32 @@
+{
+  "MWPF2E": {
+    "Settings": {
+      "MaxHeroPoints": {
+        "Name": "Pontos Heroicos (máximo)",
+        "Hint": "Máximo de Pontos Heróicos dos personagens (não-Míticos). Padrão do sistema é 3; aqui pode escolher de 1 a 10. Requer recarregar o mundo para valer para fichas já abertas."
+      }
+    }
+  },
+  "INVCOMP": {
+    "ManageCompartments": "Gerenciar compartimentos",
+    "AssignCompartment": "Atribuir compartimento",
+    "NoCompartment": "— Sem compartimento —",
+    "NewCompartmentOption": "+ Novo compartimento…",
+    "NewCompartment": "Novo compartimento",
+    "NewCompartmentName": "Nome do compartimento",
+    "NewCompartmentNamePlaceholder": "ex: Varinhas",
+    "NoCompartmentsYet": "Nenhum compartimento criado ainda.",
+    "Create": "Criar",
+    "Save": "Salvar",
+    "Cancel": "Cancelar",
+    "Delete": "Excluir"
+  },
+  "ATHLETICSATK": {
+    "SectionHeader": "Manobras de Atletismo",
+    "RowSubtitle": "{skill} • CD {save}",
+    "Configure": {
+      "Label": "Mostrar Manobras de Atletismo",
+      "Hint": "Mostra, na aba Ações, as manobras de Atletismo com o traço Ataque (Agarrar, Derrubar, Desarmar, Empurrar, Reposicionar) com botões de rolagem incluindo a Penalidade de Ataques Múltiplos."
+    }
+  }
+}
