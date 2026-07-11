@@ -4,6 +4,23 @@
       "MaxHeroPoints": {
         "Name": "Pontos Heroicos (máximo)",
         "Hint": "Máximo de Pontos Heróicos dos personagens (não-Míticos). Padrão do sistema é 3; aqui pode escolher de 1 a 10. Requer recarregar o mundo para valer para fichas já abertas."
+      },
+      "PanToCombatant": {
+        "Name": "Arrastar mapa para o combatente ativo",
+        "Hint": "Quando o turno de um combatente começa, o mapa é automaticamente arrastado (pan) até o token dele.",
+        "Choices": {
+          "Disabled": "Desativado",
+          "GM": "Somente Mestre",
+          "Everyone": "Todos"
+        }
+      },
+      "CriticalSound": {
+        "Name": "Som de 1/20 natural",
+        "Hint": "Toca um som quando um personagem jogador rola 1 ou 20 natural em um teste de d20 (ataques, resistências, perícias, iniciativa etc.)."
+      },
+      "CriticalSoundVolume": {
+        "Name": "Volume do som de 1/20 natural",
+        "Hint": "Volume do som tocado em rolagens naturais de 1 ou 20."
       }
     }
   },
