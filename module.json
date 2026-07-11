@@ -27,6 +27,7 @@
     "scripts/hero-points/main.js",
     "scripts/inventory-compartments/main.js",
     "scripts/athletics-attacks/main.js",
+    "scripts/combat-camera/main.js",
     "scripts/migrate.js"
   ],
   "styles": ["styles/compartments.css", "styles/athletics-attacks.css"],

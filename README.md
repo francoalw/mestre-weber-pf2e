@@ -5,6 +5,7 @@ Módulo único para Foundry VTT v14 (sistema PF2e) que reúne os três módulos 
 - **Máximo de Pontos Heróicos**: configurável (1 a 10) em Configurações do Mundo → aba **Pf2e Mestre Weber**. Padrão: 5.
 - **Compartimentos de Inventário**: pastas virtuais na aba Inventário para organizar itens sem afetar bulk.
 - **Manobras de Atletismo como Ataques**: na aba Ações, mostra Agarrar/Derrubar/Desarmar/Empurrar/Reposicionar com três botões de rolagem (MAP 0/-5/-10), com um toggle em "Configure Character" para esconder a seção por personagem.
+- **Câmera segue o combate**: quando o turno de um combatente começa, o mapa arrasta (pan) automaticamente até o token dele. Configurável em Configurações do Mundo → **Pf2e Mestre Weber** (Desativado / Somente Mestre / Todos). Padrão: Todos. Para jogadores, o pan só acontece se o token for visível para eles (respeita `hidden` e detecção de Invisibilidade do Foundry) — o Mestre sempre vê o pan, já que ele enxerga tudo.
 
 O `id` interno do módulo continua `mestre-weber-pf2e` (usado na pasta, nos esmodules e no escopo das flags) — só o nome exibido (`title`) mudou para "Pf2e Mestre Weber". Trocar o `id` também exigiria renomear a pasta e migrar as flags de novo, então não fiz isso a menos que você peça.
 

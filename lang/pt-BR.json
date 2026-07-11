@@ -4,6 +4,15 @@
       "MaxHeroPoints": {
         "Name": "Pontos Heroicos (máximo)",
         "Hint": "Máximo de Pontos Heróicos dos personagens (não-Míticos). Padrão do sistema é 3; aqui pode escolher de 1 a 10. Requer recarregar o mundo para valer para fichas já abertas."
+      },
+      "PanToCombatant": {
+        "Name": "Arrastar mapa para o combatente ativo",
+        "Hint": "Quando o turno de um combatente começa, o mapa é automaticamente arrastado (pan) até o token dele.",
+        "Choices": {
+          "Disabled": "Desativado",
+          "GM": "Somente Mestre",
+          "Everyone": "Todos"
+        }
       }
     }
   },

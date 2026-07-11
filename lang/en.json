@@ -4,6 +4,15 @@
       "MaxHeroPoints": {
         "Name": "Hero Points (maximum)",
         "Hint": "Maximum Hero Points for (non-Mythic) characters. System default is 3; choose 1 to 10 here. Requires a world reload to apply to already-open sheets."
+      },
+      "PanToCombatant": {
+        "Name": "Pan map to active combatant",
+        "Hint": "When a combatant's turn starts, automatically pan the canvas to their token.",
+        "Choices": {
+          "Disabled": "Disabled",
+          "GM": "GM only",
+          "Everyone": "Everyone"
+        }
       }
     }
   },
