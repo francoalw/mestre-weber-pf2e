@@ -13,14 +13,6 @@
           "GM": "GM only",
           "Everyone": "Everyone"
         }
-      },
-      "CriticalSound": {
-        "Name": "Natural 1/20 sound",
-        "Hint": "Plays a sound when a player character rolls a natural 1 or 20 on a d20 check (attacks, saves, skills, initiative, etc.)."
-      },
-      "CriticalSoundVolume": {
-        "Name": "Natural 1/20 sound volume",
-        "Hint": "Volume of the sound played on natural 1 or 20 rolls."
       }
     }
   },

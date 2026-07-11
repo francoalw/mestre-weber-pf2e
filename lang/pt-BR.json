@@ -13,14 +13,6 @@
           "GM": "Somente Mestre",
           "Everyone": "Todos"
         }
-      },
-      "CriticalSound": {
-        "Name": "Som de 1/20 natural",
-        "Hint": "Toca um som quando um personagem jogador rola 1 ou 20 natural em um teste de d20 (ataques, resistências, perícias, iniciativa etc.)."
-      },
-      "CriticalSoundVolume": {
-        "Name": "Volume do som de 1/20 natural",
-        "Hint": "Volume do som tocado em rolagens naturais de 1 ou 20."
       }
     }
   },
