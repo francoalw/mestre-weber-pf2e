@@ -63,28 +63,35 @@ function getHpPerTier(level, sign) {
 function patchNPCAdjustments(NPCPF2e) {
   const original = NPCPF2e.prototype.prepareDerivedData;
   NPCPF2e.prototype.prepareDerivedData = function (...args) {
-    original.call(this, ...args);
-
     const extraTier = getExtraTier(this);
-    if (!extraTier || !(this.isElite || this.isWeak)) return;
-
+    const hasAdjustment = this.isElite || this.isWeak;
     const sign = this.isElite ? 1 : -1;
     const flatAmount = 2 * extraTier * sign;
-    const attributes = this.system.attributes;
 
     // CA, saves, Percepção, perícias e ataques: reaproveita o mesmo mecanismo do sistema
-    // (ajuste de modificadores com slug "base", igual ao Elite/Fraco padrão).
-    this.synthetics.modifierAdjustments.all.push({
-      slug: "base",
-      getNewValue: (base) => base + flatAmount,
-      test: () => true
-    });
+    // (ajuste de modificadores com slug "base", igual ao Elite/Fraco padrão). Precisa ser
+    // empurrado ANTES do prepareDerivedData original, pois é ali dentro que CA/saves/
+    // Percepção/perícias leem synthetics.modifierAdjustments para montar seus Statistics.
+    if (extraTier && hasAdjustment) {
+      this.synthetics.modifierAdjustments.all.push({
+        slug: "base",
+        getNewValue: (base) => base + flatAmount,
+        test: () => true
+      });
+    }
+
+    original.call(this, ...args);
+
+    if (!extraTier || !hasAdjustment) return;
+
+    const attributes = this.system.attributes;
 
     // CD de classe/magia.
     if (attributes.classDC) attributes.classDC.value += flatAmount;
     if (attributes.classOrSpellDC) attributes.classOrSpellDC.value += flatAmount;
 
     // HP: mesma tabela por nível do Elite/Fraco padrão, escalada pelos níveis extras.
+    // Precisa ser depois de original(), pois é ali que hp.max é (re)calculado do zero.
     const hpExtra = getHpPerTier(this.system.details.level.base, sign) * extraTier;
     const hp = attributes.hp;
     hp.max = Math.max(hp.max + hpExtra, 1);

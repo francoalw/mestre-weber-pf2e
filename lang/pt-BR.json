@@ -13,6 +13,10 @@
           "GM": "Somente Mestre",
           "Everyone": "Todos"
         }
+      },
+      "PauseIconNoSpin": {
+        "Name": "Ícone de pausa parado",
+        "Hint": "Impede que o ícone exibido quando o jogo está pausado fique girando."
       }
     }
   },
