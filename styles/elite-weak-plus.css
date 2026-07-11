@@ -1,0 +1,17 @@
+.mwpf2e-extra-tier {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.mwpf2e-extra-tier a {
+  cursor: pointer;
+  padding: 0 3px;
+}
+
+.mwpf2e-extra-tier a:hover {
+  text-decoration: underline;
+}
