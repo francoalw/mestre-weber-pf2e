@@ -1,7 +1,7 @@
 {
   "id": "mestre-weber-pf2e",
   "title": "Pf2e Mestre Weber",
-  "description": "Conjunto de ajustes para o sistema PF2e: máximo de Pontos Heróicos, compartimentos de inventário, manobras de Atletismo como ataques na aba Ações e câmera que segue o combate.",
+  "description": "Conjunto de ajustes para o sistema PF2e: máximo de Pontos Heróicos, compartimentos de inventário, manobras de Atletismo como ataques na aba Ações, câmera que segue o combate e ferramenta de Terreno Difícil na aba Região.",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "13",
@@ -29,6 +29,7 @@
     "scripts/athletics-attacks/main.js",
     "scripts/combat-camera/main.js",
     "scripts/critical-sound/loader.js",
+    "scripts/difficult-terrain/main.js",
     "scripts/migrate.js"
   ],
   "styles": ["styles/compartments.css", "styles/athletics-attacks.css"],

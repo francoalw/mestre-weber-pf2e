@@ -6,6 +6,7 @@ Módulo único para Foundry VTT v14 (sistema PF2e) que reúne os três módulos 
 - **Compartimentos de Inventário**: pastas virtuais na aba Inventário para organizar itens sem afetar bulk.
 - **Manobras de Atletismo como Ataques**: na aba Ações, mostra Agarrar/Derrubar/Desarmar/Empurrar/Reposicionar com três botões de rolagem (MAP 0/-5/-10), com um toggle em "Configure Character" para esconder a seção por personagem.
 - **Câmera segue o combate**: quando o turno de um combatente começa, o mapa arrasta (pan) automaticamente até o token dele. Configurável em Configurações do Mundo → **Pf2e Mestre Weber** (Desativado / Somente Mestre / Todos). Padrão: Todos. Para jogadores, o pan só acontece se o token for visível para eles (respeita `hidden` e detecção de Invisibilidade do Foundry) — o Mestre sempre vê o pan, já que ele enxerga tudo.
+- **Terreno Difícil**: novo botão (ícone de montanha) na aba **Região** dos Controles de Cena. Ative-o e desenhe uma forma com as ferramentas normais de Região (retângulo, elipse ou polígono) — a Região criada já vem com o comportamento "Modificar Custo de Movimento" configurado como Terreno Difícil (dobra o custo de deslocamento a pé). Fica ativo até você clicar de novo para desligar, permitindo desenhar várias áreas seguidas. Só aparece para o Mestre.
 
 `scripts/critical-sound/loader.js` tenta carregar dinamicamente um `./local.js` opcional (não versionado — veja `.gitignore`); é uma extensão local desta instalação e não faz parte do módulo distribuído.
 
