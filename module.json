@@ -2,7 +2,7 @@
   "id": "mestre-weber-pf2e",
   "title": "Pf2e Mestre Weber",
   "description": "Conjunto de ajustes para o sistema PF2e: máximo de Pontos Heróicos, compartimentos de inventário, manobras de Atletismo como ataques na aba Ações, câmera que segue o combate, ferramenta de Terreno Difícil na aba Região e níveis extras de Elite/Fraco com dado de dano extra.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
