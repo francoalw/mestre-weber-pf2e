@@ -13,10 +13,6 @@
           "GM": "GM only",
           "Everyone": "Everyone"
         }
-      },
-      "PauseIconNoSpin": {
-        "Name": "Static pause icon",
-        "Hint": "Prevents the icon shown while the game is paused from spinning."
       }
     }
   },

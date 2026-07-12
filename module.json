@@ -31,14 +31,12 @@
     "scripts/critical-sound/loader.js",
     "scripts/difficult-terrain/main.js",
     "scripts/elite-weak-plus/main.js",
-    "scripts/pause-icon/main.js",
     "scripts/migrate.js"
   ],
   "styles": [
     "styles/compartments.css",
     "styles/athletics-attacks.css",
-    "styles/elite-weak-plus.css",
-    "styles/pause-icon.css"
+    "styles/elite-weak-plus.css"
   ],
   "languages": [
     { "lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt-BR.json" },
