@@ -28,7 +28,6 @@
     "scripts/inventory-compartments/main.js",
     "scripts/athletics-attacks/main.js",
     "scripts/combat-camera/main.js",
-    "scripts/critical-sound/loader.js",
     "scripts/difficult-terrain/main.js",
     "scripts/elite-weak-plus/main.js",
     "scripts/migrate.js"

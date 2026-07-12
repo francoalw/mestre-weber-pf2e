@@ -9,8 +9,6 @@ Módulo único para Foundry VTT v14 (sistema PF2e) que reúne os três módulos 
 - **Terreno Difícil**: novo botão (ícone de montanha) na aba **Região** dos Controles de Cena. Ative-o e desenhe uma forma com as ferramentas normais de Região (retângulo, elipse ou polígono) — a Região criada já vem com o comportamento "Modificar Custo de Movimento" configurado como Terreno Difícil (dobra o custo de deslocamento a pé). Fica ativo até você clicar de novo para desligar, permitindo desenhar várias áreas seguidas. Só aparece para o Mestre.
 - **Elite/Fraco com níveis extras**: quando um NPC está Elite ou Fraco (botões padrão do sistema, na ficha), aparecem setinhas "−"/"+" ao lado para empilhar níveis extras (Elite +1, +2, +3...). Cada nível extra soma mais ±2 em CA/saves/Percepção/perícias/ataques/CD e mais HP (mesma tabela por nível do Elite/Fraco padrão). Além disso, todo NPC Elite agora também ganha **um dado de dano extra** no primeiro dano de cada ataque (além do +2 fixo que o sistema já dava), e cada nível extra de Elite soma mais um dado. Fraco não perde dados, só o -2 fixo padrão.
 
-`scripts/critical-sound/loader.js` tenta carregar dinamicamente um `./local.js` opcional (não versionado — veja `.gitignore`); é uma extensão local desta instalação e não faz parte do módulo distribuído.
-
 O `id` interno do módulo continua `mestre-weber-pf2e` (usado na pasta, nos esmodules e no escopo das flags) — só o nome exibido (`title`) mudou para "Pf2e Mestre Weber". Trocar o `id` também exigiria renomear a pasta e migrar as flags de novo, então não fiz isso a menos que você peça.
 
 ## Instalação
