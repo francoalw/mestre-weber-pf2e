@@ -37,17 +37,6 @@
     "Cancel": "Cancel",
     "Delete": "Delete"
   },
-  "ACTIONCOMP": {
-    "ManageCompartments": "Manage action compartments",
-    "ManageCompartmentsShort": "Folders",
-    "NewCompartment": "New compartment",
-    "NewCompartmentName": "Compartment name",
-    "NewCompartmentNamePlaceholder": "e.g. Reactions",
-    "NoCompartmentsYet": "No compartments created yet.",
-    "Save": "Save",
-    "Cancel": "Cancel",
-    "Delete": "Delete"
-  },
   "ATHLETICSATK": {
     "SectionHeader": "Athletics Maneuvers",
     "RowSubtitle": "{skill} • DC {save}",

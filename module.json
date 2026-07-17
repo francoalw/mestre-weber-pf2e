@@ -1,8 +1,8 @@
 {
   "id": "mestre-weber-pf2e",
   "title": "Pf2e Mestre Weber",
-  "description": "Conjunto de ajustes para o sistema PF2e: máximo de Pontos Heróicos, compartimentos de inventário, compartimentos de ações, manobras de Atletismo como ataques na aba Ações, câmera que segue o combate, ferramenta de Terreno Difícil na aba Região, um nível extra (único) de Elite/Fraco com dado de dano extra, rastreamento de mãos livres ao equipar itens e opção para o Mestre ocultar compêndios do sistema/módulos na aba Compêndios.",
-  "version": "1.0.12",
+  "description": "Conjunto de ajustes para o sistema PF2e: máximo de Pontos Heróicos, compartimentos de inventário, manobras de Atletismo como ataques na aba Ações, câmera que segue o combate, ferramenta de Terreno Difícil na aba Região, um nível extra (único) de Elite/Fraco com dado de dano extra, rastreamento de mãos livres ao equipar itens e opção para o Mestre ocultar compêndios do sistema/módulos na aba Compêndios.",
+  "version": "1.0.13",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -26,7 +26,6 @@
   "esmodules": [
     "scripts/hero-points/main.js",
     "scripts/inventory-compartments/main.js",
-    "scripts/action-compartments/main.js",
     "scripts/athletics-attacks/main.js",
     "scripts/combat-camera/main.js",
     "scripts/difficult-terrain/main.js",
@@ -37,7 +36,6 @@
   ],
   "styles": [
     "styles/compartments.css",
-    "styles/action-compartments.css",
     "styles/athletics-attacks.css",
     "styles/elite-weak-plus.css",
     "styles/compendium-hider.css"

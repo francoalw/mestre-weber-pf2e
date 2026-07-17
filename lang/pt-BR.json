@@ -37,17 +37,6 @@
     "Cancel": "Cancelar",
     "Delete": "Excluir"
   },
-  "ACTIONCOMP": {
-    "ManageCompartments": "Gerenciar compartimentos de ações",
-    "ManageCompartmentsShort": "Pastas",
-    "NewCompartment": "Novo compartimento",
-    "NewCompartmentName": "Nome do compartimento",
-    "NewCompartmentNamePlaceholder": "ex: Reações",
-    "NoCompartmentsYet": "Nenhum compartimento criado ainda.",
-    "Save": "Salvar",
-    "Cancel": "Cancelar",
-    "Delete": "Excluir"
-  },
   "ATHLETICSATK": {
     "SectionHeader": "Manobras de Atletismo",
     "RowSubtitle": "{skill} • CD {save}",
