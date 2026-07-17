@@ -13,7 +13,14 @@
           "GM": "Somente Mestre",
           "Everyone": "Todos"
         }
+      },
+      "HandTracking": {
+        "Name": "Rastrear uso de mãos",
+        "Hint": "Impede que um personagem segure um item (arma, escudo, etc.) quando não sobram mãos livres para isso — por exemplo, empunhar um martelo em duas mãos enquanto segura um escudo. Não se aplica a atores/atualizações feitas pelo Mestre."
       }
+    },
+    "HandTracking": {
+      "NotEnoughHands": "{item} precisa de {needed} mão(s) livre(s), mas só há {free} disponível(is)."
     }
   },
   "INVCOMP": {
@@ -30,6 +37,17 @@
     "Cancel": "Cancelar",
     "Delete": "Excluir"
   },
+  "ACTIONCOMP": {
+    "ManageCompartments": "Gerenciar compartimentos de ações",
+    "ManageCompartmentsShort": "Pastas",
+    "NewCompartment": "Novo compartimento",
+    "NewCompartmentName": "Nome do compartimento",
+    "NewCompartmentNamePlaceholder": "ex: Reações",
+    "NoCompartmentsYet": "Nenhum compartimento criado ainda.",
+    "Save": "Salvar",
+    "Cancel": "Cancelar",
+    "Delete": "Excluir"
+  },
   "ATHLETICSATK": {
     "SectionHeader": "Manobras de Atletismo",
     "RowSubtitle": "{skill} • CD {save}",
@@ -37,5 +55,16 @@
       "Label": "Mostrar Manobras de Atletismo",
       "Hint": "Mostra, na aba Ações, as manobras de Atletismo com o traço Ataque (Agarrar, Derrubar, Desarmar, Empurrar, Reposicionar) com botões de rolagem incluindo a Penalidade de Ataques Múltiplos."
     }
+  },
+  "COMPHIDE": {
+    "ManageButton": "Gerenciar compêndios ocultos",
+    "ManageButtonShort": "Ocultar",
+    "Hint": "O Foundry não permite apagar de verdade compêndios que pertencem ao sistema ou a módulos (eles ficam dentro da instalação do sistema e voltariam na próxima atualização). Marque abaixo os que quer esconder da lista de Compêndios — para todos na mesa, não só você. Nada é apagado; desmarque a qualquer momento para trazer de volta.",
+    "GroupSystem": "Sistema",
+    "GroupModule": "Módulos",
+    "GroupWorld": "Mundo",
+    "SearchPlaceholder": "Pesquisar compêndios…",
+    "Save": "Salvar",
+    "Cancel": "Cancelar"
   }
 }

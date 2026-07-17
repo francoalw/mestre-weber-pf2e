@@ -35,6 +35,16 @@ li.compartment-group {
   border-radius: 4px;
   margin: 0.2em 0;
   background: rgba(0, 0, 0, 0.02);
+  /* Sem isso, um clique-arrasto que não pega exatamente em cima do item
+     vira uma seleção de texto do navegador (fica tudo "pintado" de azul)
+     em vez de iniciar o drag do item para fora da pasta. */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+li.compartment-group.drag-over {
+  background: rgba(0, 128, 0, 0.08);
+  border-color: rgba(0, 128, 0, 0.4);
 }
 
 .compartment-header {

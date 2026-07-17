@@ -1,5 +1,6 @@
 const MODULE_ID = "mestre-weber-pf2e";
 const FLAG_EXTRA_TIER = "extraAdjustmentTier";
+const MAX_EXTRA_TIER = 1; // Elite/Fraco só pode ser aumentado um grau extra além do padrão.
 
 Hooks.once("setup", () => {
   const NPCPF2e = CONFIG.PF2E?.Actor?.documentClasses?.npc;
@@ -22,26 +23,28 @@ Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
 
   const extraTier = getExtraTier(actor);
   const label = actor.isElite ? "Elite" : "Fraco";
+  const atMax = extraTier >= MAX_EXTRA_TIER;
 
   const $wrapper = $(`
     <div class="mwpf2e-extra-tier">
       <a class="mwpf2e-tier-minus" title="Diminuir nível extra de ${label}">−</a>
       <span class="mwpf2e-tier-value">${label}${extraTier > 0 ? ` +${extraTier}` : ""}</span>
-      <a class="mwpf2e-tier-plus" title="Aumentar nível extra de ${label}">+</a>
+      <a class="mwpf2e-tier-plus${atMax ? " disabled" : ""}" title="${atMax ? `${label} já está no grau extra máximo` : `Aumentar nível extra de ${label}`}">+</a>
     </div>
   `);
   $wrapper.find(".mwpf2e-tier-minus").on("click", () => changeExtraTier(actor, -1));
-  $wrapper.find(".mwpf2e-tier-plus").on("click", () => changeExtraTier(actor, 1));
+  if (!atMax) $wrapper.find(".mwpf2e-tier-plus").on("click", () => changeExtraTier(actor, 1));
 
   $adjustments.append($wrapper);
 });
 
 function getExtraTier(actor) {
-  return actor.getFlag(MODULE_ID, FLAG_EXTRA_TIER) ?? 0;
+  const stored = actor.getFlag(MODULE_ID, FLAG_EXTRA_TIER) ?? 0;
+  return Math.min(MAX_EXTRA_TIER, Math.max(0, stored));
 }
 
 async function changeExtraTier(actor, delta) {
-  const next = Math.max(0, getExtraTier(actor) + delta);
+  const next = Math.min(MAX_EXTRA_TIER, Math.max(0, getExtraTier(actor) + delta));
   await actor.setFlag(MODULE_ID, FLAG_EXTRA_TIER, next);
 }
 

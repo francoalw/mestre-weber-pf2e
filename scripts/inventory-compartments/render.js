@@ -141,6 +141,8 @@ function groupByCompartment(root, actor) {
     }
     for (const li of rest) frag.appendChild(li);
     ul.append(frag);
+
+    attachRootDropHandler(ul, actor);
   }
 }
 
@@ -164,8 +166,73 @@ function buildGroupElement(compartment, items, actor) {
 
   const nested = document.createElement("ul");
   nested.className = "items compartment-contents";
-  for (const item of items) nested.appendChild(item);
+  for (const item of items) {
+    ensureDraggable(item, actor);
+    nested.appendChild(item);
+  }
   li.appendChild(nested);
 
+  attachDropHandler(li, actor, compartment.id, li);
+
   return li;
+}
+
+// Foundry marks each inventory row as draggable on its own, but once we move a row
+// into our nested compartment list that can be lost, and the browser falls back to
+// a text-selection drag that visually "selects" the whole folder instead of moving
+// just the one item. Binding our own dragstart guarantees a real, single-item drag.
+function ensureDraggable(li, actor) {
+  if (li.dataset.compartmentDragBound) return;
+  li.dataset.compartmentDragBound = "1";
+  li.draggable = true;
+  li.addEventListener("dragstart", (event) => {
+    const item = actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", JSON.stringify({ type: "Item", uuid: item.uuid }));
+  });
+}
+
+function attachDropHandler(target, actor, compartmentId, highlightEl) {
+  target.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    highlightEl.classList.add("drag-over");
+  });
+  target.addEventListener("dragleave", (event) => {
+    if (!target.contains(event.relatedTarget)) highlightEl.classList.remove("drag-over");
+  });
+  target.addEventListener("drop", async (event) => {
+    highlightEl.classList.remove("drag-over");
+    const item = resolveDroppedOwnItem(event, actor);
+    if (!item) return;
+    event.preventDefault();
+    event.stopPropagation();
+    await setItemCompartment(item, compartmentId);
+  });
+}
+
+function attachRootDropHandler(ul, actor) {
+  if (ul.dataset.compartmentRootBound) return;
+  ul.dataset.compartmentRootBound = "1";
+  ul.addEventListener("dragover", (event) => event.preventDefault());
+  ul.addEventListener("drop", async (event) => {
+    const item = resolveDroppedOwnItem(event, actor);
+    if (!item) return;
+    event.preventDefault();
+    event.stopPropagation();
+    await setItemCompartment(item, null);
+  });
+}
+
+function resolveDroppedOwnItem(event, actor) {
+  let data;
+  try {
+    data = JSON.parse(event.dataTransfer.getData("text/plain"));
+  } catch {
+    return null;
+  }
+  if (!data || data.type !== "Item" || !data.uuid) return null;
+  const item = fromUuidSync(data.uuid);
+  if (!item || item.actor?.uuid !== actor.uuid) return null;
+  return item;
 }

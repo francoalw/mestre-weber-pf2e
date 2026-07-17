@@ -15,3 +15,9 @@
 .mwpf2e-extra-tier a:hover {
   text-decoration: underline;
 }
+
+.mwpf2e-extra-tier a.disabled {
+  cursor: default;
+  opacity: 0.35;
+  pointer-events: none;
+}

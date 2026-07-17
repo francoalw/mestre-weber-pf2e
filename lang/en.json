@@ -13,7 +13,14 @@
           "GM": "GM only",
           "Everyone": "Everyone"
         }
+      },
+      "HandTracking": {
+        "Name": "Track hand usage",
+        "Hint": "Blocks a character from holding an item (weapon, shield, etc.) when they don't have enough free hands for it — e.g. wielding a hammer in two hands while also holding a shield. Doesn't apply to GM-controlled actors/updates."
       }
+    },
+    "HandTracking": {
+      "NotEnoughHands": "{item} needs {needed} free hand(s), but only {free} available."
     }
   },
   "INVCOMP": {
@@ -30,6 +37,17 @@
     "Cancel": "Cancel",
     "Delete": "Delete"
   },
+  "ACTIONCOMP": {
+    "ManageCompartments": "Manage action compartments",
+    "ManageCompartmentsShort": "Folders",
+    "NewCompartment": "New compartment",
+    "NewCompartmentName": "Compartment name",
+    "NewCompartmentNamePlaceholder": "e.g. Reactions",
+    "NoCompartmentsYet": "No compartments created yet.",
+    "Save": "Save",
+    "Cancel": "Cancel",
+    "Delete": "Delete"
+  },
   "ATHLETICSATK": {
     "SectionHeader": "Athletics Maneuvers",
     "RowSubtitle": "{skill} • DC {save}",
@@ -37,5 +55,16 @@
       "Label": "Show Athletics Maneuvers",
       "Hint": "Shows, on the Actions tab, the Athletics maneuvers with the Attack trait (Grapple, Trip, Disarm, Shove, Reposition) with roll buttons that include the Multiple Attack Penalty."
     }
+  },
+  "COMPHIDE": {
+    "ManageButton": "Manage hidden compendiums",
+    "ManageButtonShort": "Hide",
+    "Hint": "Foundry doesn't allow truly deleting compendiums owned by the system or by modules (they live inside the system's install and would come back on the next update). Check the ones below to hide them from the Compendium list — for everyone at the table, not just you. Nothing is deleted; uncheck at any time to bring it back.",
+    "GroupSystem": "System",
+    "GroupModule": "Modules",
+    "GroupWorld": "World",
+    "SearchPlaceholder": "Search compendiums…",
+    "Save": "Save",
+    "Cancel": "Cancel"
   }
 }
